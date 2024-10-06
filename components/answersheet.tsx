@@ -116,7 +116,7 @@ const AnswerSheet = () => {
                             id={`answer-${index}`}
                             value={answer.value}
                             onChange={(e) => handleAnswerChange(index, e.target.value)}
-                            className={`w-12 ${answer.isCorrect === null
+                            className={`w-14 ${answer.isCorrect === null
                                 ? ''
                                 : answer.isCorrect
                                     ? 'bg-green-100 dark:bg-green-900'
@@ -128,7 +128,7 @@ const AnswerSheet = () => {
                             <Input
                                 value={answer.correctAnswer}
                                 onChange={(e) => handleCorrectAnswerChange(index, e.target.value)}
-                                className="w-12"
+                                className="w-14"
                                 maxLength={5}
                                 placeholder="Key"
                             />
@@ -185,7 +185,7 @@ const AnswerSheet = () => {
                             </div>
                             <Button onClick={resetAll} variant="outline">Reset All</Button>
                         </div>
-                        <div className="max-h-[calc(100vh-250px)] overflow-y-auto p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                        <div className="max-h-[calc(100vh-250px)] overflow-y-auto p-4 rounded-lg">
                             {renderAnswerInputs()}
                         </div>
                     </CardContent>
